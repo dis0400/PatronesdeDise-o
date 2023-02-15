@@ -1,6 +1,6 @@
 package BuilderMethod;
 
-public class ComputadoraI5 extends BuilderCompuG {
+public class CompuI5_bajo extends BuilderCompuG {
     @Override
     public void buildNombre() {
         this.computadora.setNombre("I5-Bajo");
