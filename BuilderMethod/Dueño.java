@@ -1,7 +1,7 @@
 package BuilderMethod;
 
 public class Dueño {
-    private  BuilderComputadora builder;
+    private  BuilderCompuG builder;
 
     public Computadora getComputadora(){
         return builder.getComputadora();
