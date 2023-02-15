@@ -1,6 +1,6 @@
 package BuilderMethod;
 
-public abstract class BuilderComputadora {
+public abstract class BuilderCompuG {
 
     protected Computadora computadora;
 
