@@ -1,7 +1,8 @@
-package FactoryMethod;
+package AbstactMethod;
 
-public class PasajeSolidario implements IPasaje{
-    
+
+public class PasajeStandard implements IPasaje{
+
     private String numeroVuelo;
     private Lugar destino;
     private Lugar origen;
@@ -9,22 +10,6 @@ public class PasajeSolidario implements IPasaje{
     private Pasajero pasajero;
     private String numeroAsiento;
     private String costoPasaje;
-    private double descuento;
-    private String motivoDeDescuento;
-
-    public double getDescuento() {
-        return descuento;
-    }
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
-    }
-
-    public String getMotivoDeDescuento() {
-        return motivoDeDescuento;
-    }
-    public void setMotivoDeDescuento(String motivoDeDescuento) {
-        this.motivoDeDescuento = motivoDeDescuento;
-    }
 
     public String getNumeroVuelo() {
         return numeroVuelo;
@@ -68,19 +53,17 @@ public class PasajeSolidario implements IPasaje{
     public void setCostoPasaje(String costoPasaje) {
         this.costoPasaje = costoPasaje;
     }
-
     @Override
     public void compraPasaje() {
         System.out.println("***************************************");
-        System.out.println("SE REALIZA LA COMPRA DE UN PASAJE SOLIDARIO");
+        System.out.println("COMPRA DE UN PASAJE STANDARD");
         System.out.println("COMPRADOR: ");
         pasajero.show();
         
     }
-
     @Override
     public void show() {
-        System.out.println("------------PASAJE SOLIDARIO-----------");
+        System.out.println("----------PASAJE STANDARD-------------");
         System.out.println("NUMERO VUELO: "+numeroVuelo);
         System.out.println("ORIGEN:");
         origen.show();
@@ -92,8 +75,5 @@ public class PasajeSolidario implements IPasaje{
         pasajero.show();
         System.out.println("NUMERO DE ASIENTO: "+numeroAsiento);
         System.out.println("COSTO: "+costoPasaje);
-        System.out.println("DESCUENTO: "+descuento*100+"%");
-        System.out.println("MOTIVO: "+motivoDeDescuento);
-        
     }
 }

@@ -1,6 +1,6 @@
 package FactoryMethod;
 
-public class PasajeStandard {
+public class PasajeStandard implements IPasaje{
 private String numeroVuelo;
     private Lugar destino;
     private Lugar origen;

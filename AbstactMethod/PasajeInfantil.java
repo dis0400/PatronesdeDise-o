@@ -1,30 +1,13 @@
-package FactoryMethod;
+package AbstactMethod;
 
-public class PasajeSolidario implements IPasaje{
-    
+public class PasajeInfantil implements IPasaje{
     private String numeroVuelo;
     private Lugar destino;
     private Lugar origen;
     private Avion avion;
     private Pasajero pasajero;
     private String numeroAsiento;
-    private String costoPasaje;
-    private double descuento;
-    private String motivoDeDescuento;
-
-    public double getDescuento() {
-        return descuento;
-    }
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
-    }
-
-    public String getMotivoDeDescuento() {
-        return motivoDeDescuento;
-    }
-    public void setMotivoDeDescuento(String motivoDeDescuento) {
-        this.motivoDeDescuento = motivoDeDescuento;
-    }
+    private String costoEspecial;
 
     public String getNumeroVuelo() {
         return numeroVuelo;
@@ -62,25 +45,23 @@ public class PasajeSolidario implements IPasaje{
     public void setNumeroAsiento(String numeroAsiento) {
         this.numeroAsiento = numeroAsiento;
     }
-    public String getCostoPasaje() {
-        return costoPasaje;
+    public String getCostoEspecial() {
+        return costoEspecial;
     }
-    public void setCostoPasaje(String costoPasaje) {
-        this.costoPasaje = costoPasaje;
+    public void setCostoEspecial(String costoEspecial) {
+        this.costoEspecial = costoEspecial;
     }
-
     @Override
     public void compraPasaje() {
         System.out.println("***************************************");
-        System.out.println("SE REALIZA LA COMPRA DE UN PASAJE SOLIDARIO");
-        System.out.println("COMPRADOR: ");
+        System.out.println("COMPRA DE UN PASAJE INFANTIL");
+        System.out.println("PASAJERO: ");
         pasajero.show();
         
     }
-
     @Override
     public void show() {
-        System.out.println("------------PASAJE SOLIDARIO-----------");
+        System.out.println("-----------PASAJE INFANTIL------------");
         System.out.println("NUMERO VUELO: "+numeroVuelo);
         System.out.println("ORIGEN:");
         origen.show();
@@ -91,9 +72,10 @@ public class PasajeSolidario implements IPasaje{
         System.out.println("PASAJERO: ");
         pasajero.show();
         System.out.println("NUMERO DE ASIENTO: "+numeroAsiento);
-        System.out.println("COSTO: "+costoPasaje);
-        System.out.println("DESCUENTO: "+descuento*100+"%");
-        System.out.println("MOTIVO: "+motivoDeDescuento);
-        
+        System.out.println("COSTO ESPECIAL: "+costoEspecial);
+    }
+    @Override
+    public void setCostoPasaje(String costo) {
+        setCostoEspecial(costo);
     }
 }

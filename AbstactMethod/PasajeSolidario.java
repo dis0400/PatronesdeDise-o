@@ -1,7 +1,8 @@
-package FactoryMethod;
+package AbstactMethod;
+
 
 public class PasajeSolidario implements IPasaje{
-    
+
     private String numeroVuelo;
     private Lugar destino;
     private Lugar origen;
@@ -72,12 +73,15 @@ public class PasajeSolidario implements IPasaje{
     @Override
     public void compraPasaje() {
         System.out.println("***************************************");
-        System.out.println("SE REALIZA LA COMPRA DE UN PASAJE SOLIDARIO");
+        System.out.println("COMPRA DE UN PASAJE SOLIDARIO");
         System.out.println("COMPRADOR: ");
         pasajero.show();
         
     }
 
+    /* (non-Javadoc)
+     * @see AbstactMethod.IPasaje#show()
+     */
     @Override
     public void show() {
         System.out.println("------------PASAJE SOLIDARIO-----------");
