@@ -2,7 +2,7 @@ package BuilderMethod;
 
 public class Cliente {
     public static void main(String[] args) {
-        Dueño dueño = new Dueno();
+        Dueño dueño = new Dueño();
         CompuI9_alto alto = new CompuI9_alto();
         CompuI7_medio medio = new CompuI7_medio();
         CompuI5_bajo bajo = new CompuI5_bajo();

@@ -60,7 +60,7 @@ public class Computadora {
     }
 
     public void showInfo(){
-        System.out.printl("Esta Usando lo siguiente")
+        System.out.println("Esta Usando lo siguiente");
         System.out.println(nombre+"____________________________");
         System.out.println("Monitor: "+monitor);
         System.out.println("Teclado: "+teclado);
