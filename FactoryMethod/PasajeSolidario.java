@@ -96,4 +96,6 @@ public class PasajeSolidario implements IPasaje{
         System.out.println("MOTIVO: "+motivoDeDescuento);
         
     }
+    public void setCostoEspecial(String string) {
+    }
 }
